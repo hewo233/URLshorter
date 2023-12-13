@@ -42,8 +42,8 @@ func SaveUrlMapping(shortUrl string, originalUrl string, userID string) {
 	}
 }
 
-func RetrieveInitUrl(shhortUrl string) string {
-	result, errGet := storeService.redisClient.Get(ctx, shhortUrl).Result()
+func RetrieveInitUrl(shortUrl string) string {
+	result, errGet := storeService.redisClient.Get(ctx, shortUrl).Result()
 	if errGet != nil {
 		panic(errGet)
 	}
